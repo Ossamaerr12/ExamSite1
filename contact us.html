@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us via WhatsApp</title>
+  <link rel="shortcut icon" href="Black Illustrated School Logo.png" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.contact-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+.input-group i {
+  font-size: 18px;
+  color: #0072ff;
+  margin-right: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #333;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid #0072ff;
+  box-shadow: 0 0 5px rgba(0, 114, 255, 0.5);
+}
+
+button {
+  background: #25D366;
+  color: white;
+  font-size: 1.1em;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #20b358;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.6em;
+  }
+  button {
+    padding: 10px;
+  }
+}
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+    background-color: #222;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #3498db;
+    animation: spin 2s linear infinite;
+    z-index: 100001;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #e74c3c;
+    animation: spin 3s linear infinite;
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #f9c922;
+    animation: spin 1.5s linear infinite;
+}
+
+/* الدوائر الدوارة */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* التنقل بين الـ loader والمحتوى */
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #222222;
+    z-index: 100000;
+}
+
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+
+#loader-wrapper.loader-section.section-left.loaded {
+    transform: translateX(-100%);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+#loader-wrapper.loader-section.section-right.loaded {
+    transform: translateX(100%);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+#loader.loaded {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+#loader-wrapper.loaded {
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: all 0.3s 1s ease-out;
+}
+#loader-wrapper h2 {
+    display: block;
+    position: relative;
+    left: 40%;
+    top: 80%;
+    z-index: 100001;
+    color: rgb(92, 92, 92);
+  }
+  /* استعلام وسائط للأجهزة الصغيرة */
+  @media screen and (max-width: 768px) {
+    #loader-wrapper h2 {
+        font-size: 1.5rem; /* تقليص حجم الخط على الشاشات الصغيرة */
+         margin-left: -88px;
+    }
+}
+  </style>
+</head>
+<body>
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+    <h2>Please wait 7 seconds</h2>
+</div>
+  <div class="contact-container">
+    <h1>Contact Us via WhatsApp</h1>
+    <form id="contact-form">
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="name" placeholder="Full Name" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-phone"></i>
+        <input type="text" id="phone" placeholder="Your WhatsApp Number" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-comment"></i>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="button" id="whatsapp-button">Send via WhatsApp</button>
+    </form>
+  </div>
+  <script>
+    const whatsappButton = document.getElementById('whatsapp-button');
+
+whatsappButton.addEventListener('click', () => {
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const message = document.getElementById('message').value;
+
+  if (name && phone && message) {
+    const encodedMessage = encodeURIComponent(`Hello, my name is ${name}. ${message}`);
+    const whatsappURL = `https://wa.me/+212621756925?text=${encodedMessage}`;
+    window.open(whatsappURL, '_blank');
+  } else {
+    alert("Please fill out all fields!");
+  }
+});
+window.onload = function() {
+    // تأخير ظهور المحتوى الرئيسي لمدة 7 ثواني
+    setTimeout(function() {
+        document.getElementById('loader-wrapper').classList.add('loaded');  // إخفاء الـ preloader
+        document.getElementById('body').style.display = 'block';    // إظهار المحتوى الرئيسي
+    }, 7000); // تأخير 7 ثواني (7000 ملي ثانية)
+};
+
+  </script>
+</body>
+</html>
