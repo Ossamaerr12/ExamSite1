@@ -1,0 +1,653 @@
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap');
+  
+/* تنسيق اللغة العربية */
+html[lang="ar"] {
+  font-family: "Tajawal", Arial, sans-serif; /* خط يدعم العربية */
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+width: 100%;
+height: 100vh;
+background-color: whitesmoke;
+transition: background-color 0.4s, color 0.4s, filter 0.4s; /* إضافة transition لجميع الخصائص المتغيرة */
+
+}
+.container{
+    width: 100%;
+    height: 10%;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: space-between;
+    transition: background 0.4s ease-in-out; /* إضافة transition للنص */
+
+}
+.logo img{
+width: 200px;
+margin-top:-50px ;
+cursor: pointer;
+transition: background-color 0.4s ease; /* إضافة transition للخلفية */
+}
+nav{
+    margin: 20px 120px;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right:40px ;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(134, 134, 134);
+    font-weight: 700;
+    font-size: 22px;
+    transition: 0.4s ease-in;
+    text-transform: uppercase;
+    transition: color 0.4s ease-in-out; /* إضافة transition للنص */
+
+}
+nav ul li a:hover{
+color: orangered;
+}
+  section{
+    width: 100%;
+    height: auto;
+  }
+  section .cover{
+    width: 100%;
+    height: 580px;
+  }
+  section h1{
+    position: absolute;
+    color: white;
+    top: 10%;
+    left: 10%;
+  }
+.cov{
+    background-color: rgba(41, 41, 41, 0.13);
+    position: absolute;
+    top: 23.5%;
+    left: 5%;
+    width: 90%;
+    height: 350px;
+    border-radius: 12px;
+}
+  section h1{
+    position: absolute;
+    color: rgb(255, 123, 0);
+    top: 20%;
+    left: 1%;
+    font-weight: 900;
+    font-size: 35px;
+  }
+  section p{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 35%;
+    left: 10%;
+    font-weight: 800;
+    font-size: 30px;
+    width: 50%;
+  }
+   section  .lo{
+    width: 200px;
+    margin-top:50px ;
+    cursor: pointer;
+  margin-left: 850px;
+  border: none;
+  border-radius: 50%;
+  transition: 0.4s;
+  animation: rotation 10s linear infinite;
+  }
+  section .lo:hover{
+    scale: 1.1;
+    transform: rotate(0deg);
+
+  }
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .social{
+    background: url(/img/modele.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 380px;
+    transition: background 0.4s ease-in-out; /* إضافة transition للنص */
+
+  }
+.social #help{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 80%;
+    left: 10%;
+    font-weight: 900;
+    font-size: 35px;
+    transition: color 0.4s ease-in-out; /* إضافة transition للنص */
+
+}
+.social .email{
+    position: absolute;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 25px;
+color: rgb(9, 73, 190);
+    top: 90%;
+    left: 20%;
+    background: greenyellow;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 5px;
+    box-shadow: 3px 19px 6px -5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 19px 6px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 19px 6px -5px rgba(0,0,0,0.75);
+    transition:  0.4s ease;
+}
+.social .email:hover{
+    scale: 1.1;
+    letter-spacing: 2px;
+}
+.social_media {
+position: absolute;
+top: 100%;
+margin-left: 230px;
+}
+.social_media ul{
+    list-style: none;
+
+}
+.social_media ul li{
+    display: inline-block;
+    margin-right: 40px;
+    font-weight: 900;
+    font-size: 25px;
+}
+.social_media ul li a{
+    color: gray;
+    transition: 0.5s ease-in-out;
+    font-size: 30px;
+    transition: color 0.4s ease-in-out; /* إضافة transition للنص */
+
+}
+.social_media ul li a:hover{
+    color: blue;
+}
+#privacyPolicyModal {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+#termsConditionsModal{
+    animation: fadeIn 0.3s ease-in-out;
+}
+.burger{
+  font-size: 30px;
+  display: none;
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }  
+  @media (max-width: 768px){
+    .logo img{
+      width: 100px;
+      margin-top:-20px ;
+      cursor: pointer;
+      }
+
+nav .nav-links {
+  display: none; /* إخفاء الروابط افتراضيًا */
+  flex-direction: column; /* ترتيب العمود للروابط */
+  background-color: #333; /* لون الخلفية */
+  position: absolute; /* الموقع بالنسبة للمستطيل */
+  top: 60px; /* المسافة من الأعلى */
+  right: 0px; /* محاذاة إلى اليمين */
+  z-index: 1000; /* فوق جميع العناصر الأخرى */
+  width: 200px; /* العرض عند الفتح */
+  border-radius:  0 0 0 8px; /* زوايا دائرية */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* إضافة ظل */
+  text-align: center; /* توسيط النصوص */
+  gap: 10px;
+
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: rgb(134, 134, 134);
+  font-weight: 700;
+  font-size: 18px;
+  transition: 0.4s ease-in;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+.burger {
+  display: block;
+  margin-left: 100px;
+  transition: 0.4s ease;
+}
+.nav-links.active {
+  display: flex;
+}
+.container{
+  width: 100%;
+  height: 10%;
+  background-color: greenyellow;
+  display: flex;
+  justify-content: space-between;
+}
+section{
+  width: 100%;
+  height: auto;
+}
+section .cover{
+  margin-top: 0px;
+  width: 100%;
+  height: 480px;
+}
+section h1{
+  position: absolute;
+  color: white;
+  top: 10%;
+  left: 10%;
+}
+.cov{
+  background-color: rgba(41, 41, 41, 0.13);
+  position: absolute;
+  top: 13.5%;
+  left: 5%;
+  width: 90%;
+  height: 350px;
+  border-radius: 12px;
+}
+section h1{
+  position: absolute;
+  color: rgb(255, 123, 0);
+  top: 10%;
+  font-weight: 900;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: underline orangered;
+}
+section p{
+  position: absolute;
+  color: rgb(0, 0, 0);
+  top: 20%;
+  left: 18%;
+  font-weight: 900;
+  font-size: 16px;
+  width: 70%;
+}
+ section  .lo{
+  width: 150px;
+  margin-top:170px ;
+  cursor: pointer;
+margin-left: 85px;
+border: none;
+border-radius: 50%;
+transition: 0.4s;
+animation: rotation 10s linear infinite;
+}
+
+section .lo:hover{
+  scale: 1.1;
+  transform: rotate(0deg);
+
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.social{
+  background: url(/img/modele.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 380px;
+}
+.social #help{
+  position: absolute;
+  color: rgb(0, 0, 0);
+  top: 85%;
+  text-align: center;
+  font-weight: 900;
+  font-size: 20px;
+  margin-left: 20px;
+}
+.social .email{
+  position: absolute;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 20px;
+color: rgb(9, 73, 190);
+  top: 95%;
+  left: 32%;
+  background: greenyellow;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 5px;
+  box-shadow: 3px 19px 6px -5px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 3px 19px 6px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 19px 6px -5px rgba(0,0,0,0.75);
+  transition: 0.4s ease;
+}
+.social .email:hover{
+  scale: 1.1;
+  letter-spacing: 2px;
+}
+.social_media {
+  position: absolute;
+top: 110%;
+margin-left: 65px;
+}
+.social_media ul{
+  list-style: none;
+
+}
+.social_media ul li{
+  margin-right: 40px;
+  font-weight: 900;
+  font-size: 25px;
+}
+.social_media ul li a{
+  color: gray;
+  transition: 0.5s ease-in-out;
+  font-size: 30px;
+
+}
+.social_media ul li a:hover{
+  color: blue;
+}
+  }
+  /* استعلام وسائط للأجهزة الصغيرة */
+  @media screen and (max-width: 768px) {
+    #loader-wrapper h2 {
+        font-size: 1.2em; /* تقليص حجم الخط على الشاشات الصغيرة */
+         margin-left: -88px;
+    }
+}
+  @media (min-width: 768px) {
+    .nav-links {
+      display: flex; /* إظهار الروابط أفقيًا */
+      flex-direction: row; /* ترتيب أفقي */
+      position: static; /* الوضع الطبيعي */
+      width: auto; /* عرض تلقائي */
+      background-color: transparent; /* إزالة الخلفية */
+      box-shadow: none;
+      padding: 0;
+      border-radius: 0;
+    }
+  
+    .burger {
+      display: none; /* إخفاء زر البرغر */
+    }
+  
+    .nav-links li {
+      margin: 0 15px; /* مسافة أفقية بين الروابط */
+    }
+
+  }
+  
+  /* الروابط النشطة */
+  .nav-links.active {
+    display: flex;
+  }
+/* التصميم الأساسي للزر */
+.dark-mode-toggle {
+  position: fixed;
+  left: 20px;
+  top: 80%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #0011ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+/* الأيقونة الفاتحة (شمس) */
+.light-icon {
+  font-size: 24px;
+  color: #ffcc00;
+}
+
+/* الأيقونة الداكنة (قمر) */
+.dark-icon  {
+  font-size: 24px;
+  color: #ffffff;
+}
+body.dark-mode .dark-mode-toggle {
+  background-color: #333;
+}
+body.dark-mode .light-icon {
+  display: none;
+}
+
+body.dark-mode .dark-icon  {
+  display: inline;
+}
+/* تأثير الانتقال على الخلفية في الوضع المظلم */
+body.dark-mode .container {
+  background-color: rgb(22, 22, 22);
+  transition: background-color 0.4s ease; /* إضافة transition للخلفية */
+}
+body.dark-mode .logo img{
+  content: url(hold\ us.png);
+}
+
+/* تأثير الألوان في الروابط داخل القائمة */
+body.dark-mode nav ul li a {
+  color: white;
+  transition: color 0.4s ease; /* إضافة transition للألوان */
+}
+
+body.dark-mode nav ul li a:hover {
+  color: rgb(0, 80, 252);
+  transition: color 0.4s ease; /* إضافة transition عند التأثير */
+}
+
+/* تأثير الانتقال على الخلفية في شريط الشبكات الاجتماعية */
+body.dark-mode .social {
+  background-color: rgb(22, 22, 22);
+  transition: background-color 0.4s ease; /* إضافة transition للخلفية */
+}
+
+/* تنسيق النص في الـ #help داخل الشريط الاجتماعي */
+body.dark-mode .social #help {
+  color: white;
+  transition: color 0.4s ease; /* إضافة transition للنص */
+}
+
+/* تنسيق البريد الإلكتروني داخل الشريط الاجتماعي */
+body.dark-mode .social .email {
+  color: antiquewhite;
+  background-color: rgb(29, 29, 29);
+}
+
+/* التأثير على الروابط في الشبكات الاجتماعية */
+body.dark-mode .social_media ul li a:hover {
+  color: rgb(0, 80, 252);
+  transition: color 0.4s ease; /* إضافة transition عند التأثير */
+}
+body.dark-mode section .cover{
+  content: url(hd.jpg);
+}
+body.dark-mode .cov p{
+  color:white;
+}
+body.dark-mode .cov img{
+  content: url(hold\ us.png);
+  background-color: rgba(0, 0, 0, 0.658);
+}
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100000;
+}
+#loader-wrapper h2 {
+  display: block;
+  position: relative;
+  left: 35%;
+  top: 80%;
+  z-index: 100001;
+  color: rgb(92, 92, 92);
+}
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #3498db;
+  -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+  z-index: 100001;
+}
+
+
+#loader:before {
+content: "";
+position: absolute;
+top: 5px;
+left: 5px;
+right: 5px;
+bottom: 5px;
+border-radius: 50%;
+border: 3px solid transparent;
+border-top-color: #e74c3c;
+-webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader:after {
+content: "";
+position: absolute;
+top: 15px;
+left: 15px;
+right: 15px;
+bottom: 15px;
+border-radius: 50%;
+border: 3px solid transparent;
+border-top-color: #f9c922;
+-webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+@-webkit-keyframes spin {
+0%   { 
+  -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: rotate(0deg);  /* IE 9 */
+  transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+}
+100% {
+  -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: rotate(360deg);  /* IE 9 */
+  transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+}
+}
+@keyframes spin {
+0%   { 
+  -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: rotate(0deg);  /* IE 9 */
+  transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+}
+100% {
+  -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: rotate(360deg);  /* IE 9 */
+  transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+}
+}
+
+#loader-wrapper .loader-section {
+position: fixed;
+top: 0;
+width: 51%;
+height: 100%;
+background: #222222;
+z-index: 100000;
+-webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+-ms-transform: translateX(0);  /* IE 9 */
+transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+}
+
+#loader-wrapper .loader-section.section-left {
+left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+right: 0;
+}
+
+/* Loaded */
+#loader-wrapper.loader-section.section-left.loaded {
+-webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(-100%);  /* IE 9 */
+    transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+#loader-wrapper.loader-section.section-right.loaded {
+-webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(100%);  /* IE 9 */
+    transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+#loader.loaded {
+opacity: 0;
+-webkit-transition: all 0.3s ease-out;  
+    transition: all 0.3s ease-out;
+}
+#loader-wrapper.loaded {
+visibility: hidden;
+
+-webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateY(-100%);  /* IE 9 */
+    transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+-webkit-transition: all 0.3s 1s ease-out;  
+    transition: all 0.3s 1s ease-out;
+}
